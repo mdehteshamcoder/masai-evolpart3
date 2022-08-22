@@ -10,6 +10,17 @@ import { useEffect } from "react";
 // API to get the data : https://slides-app-220822.herokuapp.com/slides
 
 export default function App() {
+   useEffect(()=>{
+    let url="https://slides-app-220822.herokuapp.com/slides"
+    fetch(url)
+    .then(res=>res.json())
+     .then((resp)=>{
+      console.log(resp)
+     })
+     .catch(err=>{
+      console.log(err);
+     })
+  },[])
   return (
     <div className="App">
        
